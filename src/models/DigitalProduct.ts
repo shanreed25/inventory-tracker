@@ -1,6 +1,6 @@
 import { Product } from "./Product.js";
 
-class DigitialProduct extends Product{
+class DigitalProduct extends Product{
         /* Only fileSize gets the three steps property declaration, 
                 constructor parameter and assignment
                 The super(...) call has to come before this.fileSize = fileSize, 
@@ -30,4 +30,4 @@ class DigitialProduct extends Product{
 
 }
 
-export {DigitialProduct};
+export {DigitalProduct};
