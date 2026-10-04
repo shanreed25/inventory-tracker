@@ -16,7 +16,7 @@ class DigitalProduct extends Product{
     }
 
     //overriding the getPriceWithTax() method to calculate a final price with no tax
-    getPriceWithTax(): number{//polymorphism : overrides the method to add no tax.
+    getPriceWithTax(): number{
         return this.price;
     }
 }

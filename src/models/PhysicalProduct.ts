@@ -17,7 +17,7 @@ class PhysicalProduct extends Product{
 
     //overriding the getPriceWithTax() method to calculate a final 
     // price that includes a 10% tax rate
-    getPriceWithTax(): number{//polymorphism : overrides the method to add 10% tax
+    getPriceWithTax(): number{
         return this.price * 1.1;
     }
 }
