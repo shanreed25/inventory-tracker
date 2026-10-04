@@ -5,6 +5,7 @@ class PhysicalProduct extends Product{
             super(name, sku, price);
         }
 
+    //method overriding
     displayDetails(): string{
         return `${super.displayDetails()}, Weight: ${this.weight} kg`;
     }
@@ -16,6 +17,20 @@ class PhysicalProduct extends Product{
     */
     get productWeight(): string{//
         return `${this.weight} kg`
+    }
+
+    //method overriding: a method in the subclass with the exact same name, parameters, 
+    // and return type as the parent's method
+    /*In tsconfig.json for noImplicitOverride:
+        If the option is true: TypeScript requires the override keyword in front of any 
+        method that replaces a parent method
+        If the option is commented out or false: the keyword is optional. 
+        Adding the keyword anyway is still a good habit, because TypeScript will then 
+        warn you if the parent method gets renamed and your override no longer matches anything.
+    */
+    getPriceWithTax(): number{
+        //5%
+        return this.price * 1.05;
     }
 }
 

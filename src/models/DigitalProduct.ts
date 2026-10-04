@@ -12,6 +12,11 @@ class DigitalProduct extends Product{
     get productFileSize(): string{
         return `${this.fileSize} MB`;
     }
+
+    getPriceWithTax(): number{
+        //10%
+        return this.price * 1.1;
+    }
 }
 
 export {DigitalProduct};
