@@ -5,7 +5,6 @@ extends Product makes PhysicalProduct a child class and Product
 name, sku, price, displayDetails(), getPriceWithTax() comes with it
 */
 class PhysicalProduct extends Product{
-
         /*public weight: number is the only new property, so weight is the only 
         parameter that gets public
         the first three parameters stay plain because Product already declares those properties
@@ -21,7 +20,7 @@ class PhysicalProduct extends Product{
             super.displayDetails() lets you reuse the parent's version instead of rewriting it
         */
     displayDetails(): string{
-        return `${super.displayDetails()}, Weight: ${this.weight} lbs`;
+        return `${super.displayDetails()}, Weight: ${this.weight} kg`;
     }
 }
 
