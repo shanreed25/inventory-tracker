@@ -17,3 +17,4 @@ console.log(`Physical Product Getter: ${laptop.productWeight}`);//read the gette
 
 console.log(`Digital Product displayDetails: ${game.displayDetails()}`);
 console.log(`Digital Product getPriceWithTax: ${game.getPriceWithTax()}`);
+console.log(`Digital Product Getter: ${game.productFileSize}`);

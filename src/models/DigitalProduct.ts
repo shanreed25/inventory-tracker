@@ -8,6 +8,10 @@ class DigitalProduct extends Product{
     displayDetails(): string {
         return `${super.displayDetails()}, File Size: ${this.fileSize} MB`
     }
+
+    get productFileSize(): string{
+        return `${this.fileSize} MB`;
+    }
 }
 
 export {DigitalProduct};
