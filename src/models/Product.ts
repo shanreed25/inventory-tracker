@@ -34,22 +34,4 @@ class Product {
 
 
 
-// export {Product};
-
-
-class Dog {
-  name: string;
-
-  constructor(name: string) {
-    this.name = name;
-  }
-  bark(): string {
-    return `${this.name} says woof`;
-  }
-}
-
-const rex = new Dog("Rex");
-rex.bark();                                   // "Rex says woof"
-typeof Dog;                                   // "function"
-Object.getPrototypeOf(rex) === Dog.prototype; // true
-Object.hasOwn(rex, "bark");                   // false
+export {Product};
