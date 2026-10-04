@@ -35,6 +35,10 @@ class Product {
         return `Product Name: ${this.name}, Product SKU: ${this.sku}, Product Price: ${formattedPrice}`
     }
 
+    getPriceWithTax(): number{
+        return this.price;
+    }
+
 }
 
 
