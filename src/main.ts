@@ -6,4 +6,4 @@ const laptop = new Product("Hp", "hj643jhs", 1200);
 
 console.log("Tracker");
 
-console.log(laptop);
+console.log(laptop.displayDetails());

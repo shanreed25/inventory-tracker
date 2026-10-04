@@ -30,6 +30,11 @@ class Product {
     */
     constructor(public name:string, public sku:string, public price:number){}
 
+    displayDetails(): string{
+        const formattedPrice = (this.price).toLocaleString("en-US", {style: "currency", currency: "USD"})
+        return `Product Name: ${this.name}, Product SKU: ${this.sku}, Product Price: ${formattedPrice}`
+    }
+
 }
 
 
