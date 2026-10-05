@@ -12,7 +12,7 @@ class DigitalProduct extends Product{
 
     //getter method to return the formatted file size in megabytes
     get productFileSize(): string{
-        return `${this.fileSize} MB`;
+        return `File size: ${this.fileSize} MB`;
     }
 
     //overriding the getPriceWithTax() method to calculate a final price with no tax

@@ -12,7 +12,7 @@ class PhysicalProduct extends Product{
 
     //getter method to return the formatted weight in kilograms (e.g. “2.5 kg”)
     get productWeight(): string{//
-        return `${this.weight} kg`
+        return `Weight: ${this.weight} kg`
     }
 
     //overriding the getPriceWithTax() method to calculate a final 
