@@ -24,3 +24,7 @@
 #### Type Narrowing
 - Because inventory is `Product[]`, TypeScript only allows Product members on item, so `item.weight` is an error
 - The `instanceof` checks in `main.ts` narrow the type: inside if (item instanceof PhysicalProduct), TypeScript knows item is a PhysicalProduct and allows `weight`, and the DigitalProduct branch does the same for `fileSize`.
+
+
+#### Challenge
+> Added a `DiscountableProduct` interface that includes a method `applyDiscount()`. Implemented the interface in one of the DigitalProduct Class.
