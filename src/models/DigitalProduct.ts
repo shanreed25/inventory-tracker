@@ -1,18 +1,21 @@
 import { Product } from "./Product.js";
 
 class DigitalProduct extends Product{
-    constructor(name: string, sku: string, price: number, public fileSize: number) { 
+    /*
+        since nothing else needs access to fileSize it can be private
+    */
+    constructor(name: string, sku: string, price: number, private _fileSize: number) { 
         super(name, sku, price);       
     }
 
     displayDetails(): string {
-        return `${super.displayDetails()}, File Size: ${this.fileSize} MB`
+        return `${super.displayDetails()}, File Size: ${this._fileSize} MB`
     }
 
 
     //getter method to return the formatted file size in megabytes
     get productFileSize(): string{
-        return `File size: ${this.fileSize} MB`;
+        return `File size: ${this._fileSize} MB`;
     }
 
     //overriding the getPriceWithTax() method to calculate a final price with no tax

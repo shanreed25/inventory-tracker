@@ -1,18 +1,21 @@
 import {Product} from './Product.js';
 
 class PhysicalProduct extends Product{
-    constructor(name:string, sku:string, price:number, public weight:number){
+        /*
+        since nothing else needs access to weight it can be private
+    */
+    constructor(name:string, sku:string, price:number, private _weight:number){
             super(name, sku, price);
         }
 
     //method overriding
     displayDetails(): string{
-        return `${super.displayDetails()}, Weight: ${this.weight} kg`;
+        return `${super.displayDetails()}, Weight: ${this._weight} kg`;
     }
 
     //getter method to return the formatted weight in kilograms (e.g. “2.5 kg”)
     get productWeight(): string{//
-        return `Weight: ${this.weight} kg`
+        return `Weight: ${this._weight} kg`
     }
 
     //overriding the getPriceWithTax() method to calculate a final 
