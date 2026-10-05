@@ -1,6 +1,9 @@
 import { Product } from "./Product.js";
+import { DiscountableProduct } from "./DiscountableProduct.js";
 
-class DigitalProduct extends Product{
+
+class DigitalProduct extends Product implements DiscountableProduct{
+    
     protected _fileSize: number = 0;
     constructor(name: string, sku: string, price: number, fileSize: number) { 
         super(name, sku, price);
