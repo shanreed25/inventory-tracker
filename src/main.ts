@@ -21,8 +21,11 @@ if (item instanceof PhysicalProduct){//is this Product created from the Physical
 } else if (item instanceof DigitalProduct){//is this Product created from the DigitalProduct class
   console.log(item.fileSize);
 }
-  
-
-
   console.log("-".repeat(40));
 })
+
+//Add a DiscountableProduct interface that includes a method applyDiscount(). Implement this interface in one of the product classes
+const discountedProduct = new DigitalProduct("E-book", "Y60GFJ850FH", 39.99, 6);
+console.log("30% off 39.99:", discountedProduct.addDiscount(30).toFixed(2));
+console.log("30% off 39.99:", discountedProduct.addDiscount(30).toFixed(2));//discounts does not stack
+console.log(discountedProduct.price);//price is still the original price
